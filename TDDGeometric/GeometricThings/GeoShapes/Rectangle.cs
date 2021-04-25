@@ -1,22 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace TDDGeometric.GeometricThings.GeoShapes
 {
-    public class Rectangle : GeometricShape
+    using System;
+    public class Rectangle : GeometricShapes
     {
-        private float Length { get; set; }
-        private float Height { get; set; }
-
         public Rectangle(float length, float height)
         {
             Length = length;
             Height = height;
         }
 
+        private float Height { get; set; }
+        private float Length { get; set; }
         /// <summary>
         /// Räkna ut arean till en rektangel
         /// </summary>

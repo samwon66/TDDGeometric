@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace TDDGeometric.GeometricThings.GeoShapes
 {
-    public class Circle : GeometricShape
+    using System;
+    public class Circle : GeometricShapes
     {
-        private float Radius { get; set; }
-
         public Circle(float radius) { Radius = radius; }
 
+        private float Radius { get; set; }
         /// <summary>
         /// Räkna ut arean på en cirkel
         /// </summary>

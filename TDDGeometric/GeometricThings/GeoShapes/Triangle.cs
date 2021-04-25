@@ -1,22 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace TDDGeometric.GeometricThings.GeoShapes
 {
-    public class Triangle : GeometricShape
+    using System;
+    public class Triangle : GeometricShapes
     {
-        private float Side { get; set; }
-        private float Height { get; set; }
-
-        public Triangle(float side, float height) 
-        { 
+        public Triangle(float side, float height)
+        {
             this.Side = side;
             this.Height = height;
         }
 
+        private float Height { get; set; }
+        private float Side { get; set; }
         /// <summary>
         /// Räkna ut arean på en triangel
         /// </summary>

@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace TDDGeometric.GeometricThings.GeoShapes
 {
-    public class Square : GeometricShape
+    using System;
+    public class Square : GeometricShapes
     {
-        private float Side { get; set; }
-
         public Square(float side) { this.Side = side; }
 
+        private float Side { get; set; }
         /// <summary>
         /// Räkna ut arean på en kvadrat
         /// </summary>
