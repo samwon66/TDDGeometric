@@ -12,9 +12,25 @@ namespace TDDGeometric.GeometricThings.GeoShapes.Tests
     public class CircleTests
     {
         [TestMethod()]
-        public void GetAreaTest()
+        [DataRow(8f, 201.06f)]
+        [DataRow(0, 0)]
+        [DataRow(-8f, 0)]
+        public void GetAreaTest(float radius, float expected)
         {
-            Assert.Fail();
+            var circle = new Circle(radius);
+            var actual = circle.GetArea();
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod()]
+        [DataRow(8f, 50.27f)]
+        [DataRow(0, 0)]
+        [DataRow(-8f, 0)]
+        public void GetPerimeterTest(float radius, float expected)
+        {
+            var circle = new Circle(radius);
+            var actual = circle.GetPerimiter();
+            Assert.AreEqual(expected, actual);
         }
     }
 }

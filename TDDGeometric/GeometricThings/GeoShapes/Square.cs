@@ -8,28 +8,28 @@ namespace TDDGeometric.GeometricThings.GeoShapes
 {
     public class Square : GeometricShape
     {
-        public float Side { get; set; }
+        private float Side { get; set; }
 
         public Square(float side) { this.Side = side; }
 
         /// <summary>
-        /// Räkna ut area på en kvadrat
+        /// Räkna ut arean på en kvadrat
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Area som avrundas till 2 decimaler</returns>
         public override float GetArea()
         {
             if (Side <= 0) { return 0; }
-            return (float)Math.Round((Side * Side), 2); 
+            return (float)Math.Round(Side * Side, 2); 
         }
 
         /// <summary>
-        /// Räkna ut omkrets på en kvadrat
+        /// Räkna ut omkretsen på en kvadrat
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Omkretsen som avrundas till 2 decimaler</returns>
         public override float GetPerimiter()
         {
             if (Side <= 0) { return 0; }
-            return (float)Math.Round((Side * 4), 2);
+            return (float)Math.Round(Side * 4, 2);
         }
     }
 }
