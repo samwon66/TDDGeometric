@@ -19,12 +19,14 @@ namespace TDDGeometric.GeometricThings.GeoShapes
 
         public override float GetArea()
         {
-            return base.GetArea();
+            if (Length <= 0 || Height <= 0) { return 0; }
+            return (float)Math.Round((Length * Height), 2);
         }
 
         public override float GetPerimiter()
         {
-            return base.GetPerimiter();
+            if (Length <= 0 || Height <= 0) { return 0; }
+            return (float)Math.Round(((Length + Height)*2), 2);
         }
 
     }
