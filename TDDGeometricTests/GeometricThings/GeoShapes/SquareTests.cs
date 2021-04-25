@@ -7,21 +7,27 @@ namespace TDDGeometric.GeometricThings.GeoShapes.Tests
     public class SquareTests
     {
         [TestMethod()]
-        public void SquareTest()
+        [DataRow(4, 16)]
+        [DataRow(0, 0)]
+        [DataRow(3.16f, 9.99f)]
+        [DataRow(-3.16f, 0)]
+        public void GetAreaTest(float side, float expected)
         {
-            Assert.Fail();
+            var square = new Square(side);
+            var actual = square.GetArea();
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod()]
-        public void GetAreaTest()
+        [DataRow(4,16)]
+        [DataRow(0,0)]
+        [DataRow(3.16f, 12.64f)]
+        [DataRow(-3.16f, 0)]
+        public void GetPerimiterTest(float side, float expected)
         {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void GetPerimiterTest()
-        {
-            Assert.Fail();
+            var square = new Square(side);
+            var actual = square.GetPerimiter();
+            Assert.AreEqual(expected, actual);
         }
     }
 }

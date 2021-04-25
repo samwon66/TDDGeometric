@@ -8,12 +8,12 @@ namespace TDDGeometric.GeometricThings.GeoShapes
 {
     public class Rectangle : GeometricShape
     {
-        private float Base { get; set; }
+        private float Length { get; set; }
         private float Height { get; set; }
 
-        public Rectangle(float rBase, float height)
+        public Rectangle(float length, float height)
         {
-            Base = rBase;
+            Length = length;
             Height = height;
         }
 

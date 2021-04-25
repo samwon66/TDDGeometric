@@ -12,9 +12,11 @@ namespace TDDGeometric.GeometricThings.GeoShapes.Tests
     public class RectangleTests
     {
         [TestMethod()]
-        public void GetAreaTest()
+        public void GetAreaTest(float height, float length, float expected)
         {
-            Assert.Fail();
+            var rectangle = new Rectangle(height, length);
+            var actual = rectangle.GetArea();
+            Assert.AreEqual(expected, actual);
         }
     }
 }
